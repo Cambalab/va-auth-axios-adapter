@@ -1,0 +1,14 @@
+# Ignore everything by default
+*
+
+# Keep
+
+!/dist/**/*
+!/lib/**/*
+!/public/**/*
+
+!main.js
+
+!README.md
+
+!package.json
