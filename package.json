@@ -1,15 +1,16 @@
 {
   "name": "va-auth-axios-adapter",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "An Axios adapter for Vue Admin authentication and authorization",
   "author": "sgobotta <santiago@camba.coop>",
   "license": "GPL-3.0",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "npm run build && node dist/cli.js",
-    "build": "node_modules/.bin/rimraf dist/ && node_modules/.bin/babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./npm-debug.log --copy-files",
+    "changelog": "github_changelog_generator && git add CHANGELOG.md && git commit -am \"Updates changelog\"",
+    "build": "node_modules/.bin/rimraf dist/ && babel ./lib -d dist --ignore ./node_modules,./.babelrc,./npm-debug.log",
     "prepublish": "npm run build",
-    "publish": "git push origin --tags && git push origin",
+    "publish": "git push origin --tags && npm run changelog && git push origin",
     "release:major": "npm version major && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:patch": "npm version patch && npm publish"
@@ -32,8 +33,11 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/polyfill": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "rimraf": "^2.6.3",
     "vue-admin-js": "^0.0.3"
   },
