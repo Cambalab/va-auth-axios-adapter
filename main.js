@@ -7,9 +7,9 @@ import createAxiosAdapter from './lib'
 // or lib/ if I'm building a library.
 
 module.exports = {
+  createAxiosAdapter,
   description,
+  doc: `Nothing to do here. Visit ${homepage} for more information.`,
   name,
   version,
-  doc: `Nothing to do here. Visit ${homepage} for more information.`,
-  createAxiosAdapter,
 }
