@@ -1,5 +1,8 @@
 # Change Log
 
+## [v0.0.2](https://github.com/Cambalab/va-auth-axios-adapter/tree/v0.0.2) (2019-04-02)
+[Full Changelog](https://github.com/Cambalab/va-auth-axios-adapter/compare/v0.0.1...v0.0.2)
+
 ## [v0.0.1](https://github.com/Cambalab/va-auth-axios-adapter/tree/v0.0.1) (2019-03-31)
 
 
